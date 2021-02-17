@@ -3,12 +3,13 @@ import './SideNavBar.css';
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Drawer from '@material-ui/core/Drawer'
 import { makeStyles } from '@material-ui/core/styles'
+import { createMuiTheme } from '@material-ui/core/styles';
 import NavItem from '../NavItem';
 
 function SideNavBar() {
     const classes = useStyles()
 
-    return (
+    return (    
         <div className={classes.container}>
             <CssBaseline />
                 <Drawer
@@ -24,6 +25,8 @@ function SideNavBar() {
     )
 }
 
+
+
 const useStyles = makeStyles(theme => ({
     drawerPaper: {
         position: 'relative',
@@ -31,11 +34,11 @@ const useStyles = makeStyles(theme => ({
         width: 240,
         paddingTop: theme.spacing(4),
         paddingBottom: theme.spacing(4),
-        background: '#535454',
+        background: theme.palette.primary.light,
         color: '#fff',
       },
       container: {
-        background: '#535454',
+        background: theme.palette.primary.light,
       },
       
   }))

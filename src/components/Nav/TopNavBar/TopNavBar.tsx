@@ -12,7 +12,7 @@ function TopNavBar () {
     return (
         <AppBar position="static">
           <Toolbar variant="dense">
-            <Typography variant="h6" color="inherit">
+            <Typography variant="h4">
               Aashna Mahajan
             </Typography>
           </Toolbar>

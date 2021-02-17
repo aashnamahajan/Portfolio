@@ -1,16 +1,9 @@
 import React from 'react';
-import MainContent from '../MainContent';
 import SideNavBar from '../Nav/SideNavBar';
 import './Dashboard.css';
 import { makeStyles } from '@material-ui/core/styles'
 import TopNavBar from '../Nav/TopNavBar';
-import Routes from '../Routes';
 import Container from '@material-ui/core/Container'
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
-import Education from '../../Screens/Education';
-import Experience from '../../Screens/Experience';
-import Home from '../../Screens/Home';
-import Projects from '../../Screens/Projects';
 
 function Dashboard ({children}: any) {
   const classes = useStyles()
@@ -21,13 +14,11 @@ function Dashboard ({children}: any) {
           <SideNavBar/>
            
           <main className={classes.content}>
-          <Container maxWidth="lg" className={classes.container}>
-           {children}
- 
-          </Container>
-        </main> 
-        
-
+            <Container maxWidth="lg" className={classes.container}>
+            {children}
+            </Container>
+          </main> 
+      
         </div>
       </div>
     );
@@ -44,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   mainContainer: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-    background: '#535451',
+    // background: '#535451',
     flexGrow: 1,
     height: '100vh',
     overflow: 'auto',
