@@ -35,7 +35,6 @@ const useStyles = makeStyles(theme => ({
   mainContainer: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-    // background: '#535451',
     flexGrow: 1,
     height: '100vh',
     overflow: 'auto',

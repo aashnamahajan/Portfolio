@@ -16,17 +16,15 @@ const theme = createMuiTheme({
           contrastText: '#fff',
         },
       },
-      
   typography: {
     subtitle1:{
       fontFamily: "Comic Sans"
     },
-    h3: {
-      fontFamily: "Comic Sans"
-    },
+    body1: {
+      fontFamily: "Comic Sans",
+    }
   },
   overrides:{
-
   }
 });
 
