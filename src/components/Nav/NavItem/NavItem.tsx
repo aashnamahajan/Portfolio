@@ -52,7 +52,7 @@ function NavItem (){
                   {item.Icon}
                   </ListItemIcon>
 
-                 <ListItemText primary={item.name} /> 
+                 <ListItemText classes={{primary:classes.listItemText}} primary={item.name} /> 
                  
                 </ListItem>
                 </Link>
@@ -112,6 +112,7 @@ const useStyles = makeStyles(theme =>
   createStyles({
     appMenu: {
       // width: '100%',
+      marginTop: '50px',
     },
     menuItem: {
       // width: drawerWidth,
@@ -119,6 +120,10 @@ const useStyles = makeStyles(theme =>
     menuItemIcon: {
       color: '#97c05c',
     },
+    listItemText:{
+      fontSize:'1.8em',//Insert your required size
+      color: theme.palette.primary.contrastText,
+    }
   }),
 )
 

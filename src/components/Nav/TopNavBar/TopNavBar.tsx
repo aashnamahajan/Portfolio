@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 function TopNavBar () {
     return (
-        <AppBar position="static">
+        <AppBar  position="fixed" >
           <Toolbar variant="dense" className="toolbar">
             <Typography variant="h4">
               Aashna Mahajan

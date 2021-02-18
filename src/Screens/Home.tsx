@@ -1,24 +1,29 @@
 import React from 'react';
-import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography';
 import Typewriter from 'typewriter-effect';
+import Avatar from '@material-ui/core/Avatar';
+import MyPhoto from '../Assets/Images/profile_pic.jpg'
 
 function Home () {
   const classes = useStyles()
       return (
-        <main className={classes.content}>
-        <Container maxWidth="lg" className={classes.container}>
-            {/* add image */}
-            <h2> Hi! I am Aashna Mahajan. </h2>
-            <Typewriter
+        <div>
+          <Paper className={classes.paper}>
+           <Avatar alt="Profile picture" src={MyPhoto} className={classes.img}/>
+
+           <h2> Hi! I am Aashna Mahajan. </h2>
+           <Typewriter
                 onInit={(typewriter) => {
                   typewriter
                     .typeString('I am a software Engineer with experience.')
                     .deleteChars(11)
-                    .typeString('Full Stack development experience')
+                    .typeString('<Strong>Full Stack development</Strong> experience')
                     .pauseFor(300)
-                    .deleteChars(59)
-                    .typeString(' always eager to learn new things.')
+                    .deleteChars(58)
+                    .typeString('always eager to learn new things.')
                     .start();
                 }}
                 options={{
@@ -27,29 +32,64 @@ function Home () {
                 }}
   
               />
-            {/* add skills */}
-              
-        </Container>
-      </main>
-      
+           
+
+
+            
+
+            <Grid container spacing={10}>
+              <Grid item>
+                    <Typography variant="subtitle1">
+                      SKILLS
+                    </Typography>
+              </Grid>
+              <Grid item>
+                    <Typography variant="subtitle1">
+                      Frontend
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      Backend
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      Database
+                    </Typography>
+              </Grid>
+              <Grid item>
+                    <Typography variant="subtitle1">
+                      HTML | CSS | JS | ANGULAR | REACT 
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      PYTHON | JAVA | SCALA | C++ 
+                    </Typography>
+                    <Typography variant="subtitle1">
+                      HTML | CSS | JS | ANGULAR | REACT 
+                    </Typography>
+              </Grid>
+            </Grid>
+
+      </Paper>
+        </div>
 
       );
   }
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
-    background: '#535451',
-    flexGrow: 1,
-    height: '100vh',
-    overflow: 'auto',
-    color: '#fff'
+  paper: {
+    display: 'flex',
+    margin: '2%',
+    flexDirection: 'column',
+    padding: theme.spacing(10), 
+    // height: '100vh',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    borderRadius: '8px'
   },
-  content: {
-    flexGrow: 1,
-    height: '100vh',
-    overflow: 'auto',
+  img: {
+    width: theme.spacing(30),
+    height: theme.spacing(30),
+    borderWidth: 8, borderColor: '#97c05c',
+    borderStyle:'solid'
   },
 }))
 

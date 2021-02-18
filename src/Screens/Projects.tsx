@@ -5,11 +5,10 @@ import { makeStyles } from '@material-ui/core/styles'
 function Projects () {
   const classes = useStyles()
       return (
-        <main className={classes.content}>
-        <Container maxWidth="lg" className={classes.container}>
+        <div>
         Projects
-        </Container>
-      </main>
+        </div>
+        
       );
   }
 

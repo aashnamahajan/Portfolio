@@ -4,8 +4,9 @@
 
 .SideNavBar {
   /* propertys here */
+  position: absolute;
   padding: 60px 30px 0px 30px;
-  flex: var(--sidebar-flex);
+  flex: 1;
   background: rgb(238, 103, 143);
   background: linear-gradient(
     180deg,

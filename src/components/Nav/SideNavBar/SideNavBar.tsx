@@ -4,20 +4,63 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Drawer from '@material-ui/core/Drawer'
 import { makeStyles } from '@material-ui/core/styles'
 import NavItem from '../NavItem';
+import { Box, Button, Typography } from '@material-ui/core';
+
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+
+import GitHubIcon from '@material-ui/icons/GitHub';
+import EmailIcon from '@material-ui/icons/Email';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import PhoneIcon from '@material-ui/icons/Phone';
+import { isTemplateExpression } from 'typescript';
+
+const icons = [ 
+    { 
+    Icon: <GitHubIcon/>
+    },
+    { 
+    Icon: <EmailIcon/>
+    },
+    // { 
+    // Icon: <PhoneIcon/>
+    // },
+    { 
+    Icon: <TwitterIcon/>
+    },
+    // { 
+    // Icon: <FacebookIcon/>
+    // },
+]
 
 function SideNavBar() {
     const classes = useStyles()
 
     return (    
         <div className={classes.container}>
-            <CssBaseline />
+            <CssBaseline />            
                 <Drawer
                     variant="permanent"
                     classes={{
                     paper: classes.drawerPaper,
                     }}
                 >
+                    <Box textAlign="center">
+                        <Typography variant="h5" >
+                            Aashna Mahajan
+                        </Typography>
+                    </Box>
+                    
                     <NavItem/>
+
+                    
+                    <div >
+                    { icons.map( (item)=> <Button className={classes.iconList}> {item.Icon} </Button>) }
+                    </div>
+               
+               
                 </Drawer>
         </div>
     
@@ -31,14 +74,16 @@ const useStyles = makeStyles(theme => ({
         position: 'relative',
         whiteSpace: 'nowrap',
         width: 240,
-        paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(4),
+        paddingTop: theme.spacing(6),
         background: theme.palette.primary.light,
-        color: '#fff',
+        color: theme.palette.primary.contrastText,
       },
       container: {
         background: theme.palette.primary.light,
       },
+      iconList: {
+         color: '#97c05c', 
+      }
       
   }))
 
