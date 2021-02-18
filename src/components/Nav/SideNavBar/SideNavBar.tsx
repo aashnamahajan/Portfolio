@@ -51,7 +51,7 @@ function SideNavBar() {
                     <NavItem/>
 
                     
-                    <div >
+                    <div className={classes.iconMenu}>
                     { icons.map( (item)=> <Button className={classes.iconList}> {item.Icon} </Button>) }
                     </div>
                
@@ -78,6 +78,11 @@ const useStyles = makeStyles(theme => ({
       },
       iconList: {
          color: '#97c05c', 
+      },
+      iconMenu: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
       }
       
   }))

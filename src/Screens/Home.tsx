@@ -82,7 +82,6 @@ const useStyles = makeStyles(theme => ({
     // height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
-    alignSelf: 'center',
     borderRadius: '8px'
   },
   img: {
