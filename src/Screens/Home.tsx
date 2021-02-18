@@ -1,28 +1,56 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography';
 import Typewriter from 'typewriter-effect';
 import Avatar from '@material-ui/core/Avatar';
 import MyPhoto from '../Assets/Images/profile_pic.jpg'
+import Carousel from 'react-material-ui-carousel'
 
 function Home () {
   const classes = useStyles()
+
+  const skills = [
+        {
+            name: "Frontend",
+            description: "HTML | CSS | JS | ANGULAR | REACT"
+        },
+        {
+            name: "Backend",
+            description: "Python | Java | Scala | C++"
+        },
+        {
+          name: "Database",
+          description: "Oracle | MySQL"
+        },
+        {
+          name: "AWS",
+          description: "S3 | IAM | KMS | Cloud Formation | Glue | Lambda"
+        },
+        {
+          name: "Tools",
+          description: "JIRA | GIT | SonarQube | AWS CLI | IntelliJ | Zeppelin | Jupyter notebook"
+        },
+        {
+          name: "Libraries",
+          description: "NumPy | Pandas | Matplotlib | TensorFlow | Keras | OpenCV"
+        }
+      ]
+
       return (
         <div>
           <Paper className={classes.paper}>
            <Avatar alt="Profile picture" src={MyPhoto} className={classes.img}/>
 
-           <h2> Hi! I am Aashna Mahajan. </h2>
+           <h1 className={classes.title}> Hi! I am Aashna Mahajan. </h1>
+           <h2 className={classes.typewriter}>
            <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('I am a software Engineer with experience.')
+                    .typeString('I am a Software Engineer with experience.')
                     .deleteChars(11)
-                    .typeString('<Strong>Full Stack development</Strong> experience')
+                    .typeString('<Strong>Full Stack development</Strong> experience.')
                     .pauseFor(300)
-                    .deleteChars(58)
+                    .deleteChars(59)
                     .typeString('always eager to learn new things.')
                     .start();
                 }}
@@ -32,40 +60,24 @@ function Home () {
                 }}
   
               />
+              </h2>
            
+              <h3 className={classes.title}> SKILLS  </h3>
 
-
+              {/* Carousel for skills  */}
+              <Carousel animation="slide" interval={3000}>
+                  {
+                      skills.map( (skill) => 
+                      <Paper className={classes.skillCard}>
+                      <h2>{skill.name}</h2>
+                      <h4>{skill.description}</h4>
+                      </Paper> 
+                      )
+                  }
+              </Carousel>
             
 
-            <Grid container spacing={10}>
-              <Grid item>
-                    <Typography variant="subtitle1">
-                      SKILLS
-                    </Typography>
-              </Grid>
-              <Grid item>
-                    <Typography variant="subtitle1">
-                      Frontend
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      Backend
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      Database
-                    </Typography>
-              </Grid>
-              <Grid item>
-                    <Typography variant="subtitle1">
-                      HTML | CSS | JS | ANGULAR | REACT 
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      PYTHON | JAVA | SCALA | C++ 
-                    </Typography>
-                    <Typography variant="subtitle1">
-                      HTML | CSS | JS | ANGULAR | REACT 
-                    </Typography>
-              </Grid>
-            </Grid>
+            
 
       </Paper>
         </div>
@@ -87,9 +99,27 @@ const useStyles = makeStyles(theme => ({
   img: {
     width: theme.spacing(30),
     height: theme.spacing(30),
-    borderWidth: 8, borderColor: '#97c05c',
+    borderWidth: 8, 
+    borderColor: theme.palette.secondary.main,
     borderStyle:'solid'
   },
+  title: {
+    color: '#000',
+  },
+  typewriter: {
+    color: theme.palette.secondary.dark,
+  },
+  skillCard: {
+    padding: theme.spacing(3),
+    width: theme.spacing(70),
+    height: theme.spacing(15),
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.secondary.contrastText,
+  }
 }))
 
 export default Home;

@@ -19,6 +19,8 @@
     "hookrouter": "github:pureartisan/hookrouter#mui",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-material-ui-carousel": "^2.1.2",
+    "react-responsive-carousel": "^3.2.12",
     "react-rounded-image": "^2.0.11",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
