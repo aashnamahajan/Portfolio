@@ -83,6 +83,9 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        position: "fixed",
+        bottom: theme.spacing(2),
+        left: theme.spacing(2),
       }
       
   }))
