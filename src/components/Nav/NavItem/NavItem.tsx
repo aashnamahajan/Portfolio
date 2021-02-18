@@ -2,7 +2,7 @@ import React  from 'react';
 import './NavItem.css';
 import { makeStyles, createStyles } from '@material-ui/core/styles'
 
- import { Link } from 'react-router-dom'
+ import { Link } from '@material-ui/core'
 
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -45,7 +45,7 @@ function NavItem (){
       <List component="nav" className={classes.appMenu} >
         
             {   menuItems.map( (item)=> 
-                  <Link to={item.link} > 
+                  <Link href={item.link} > 
                 <ListItem button className={classes.menuItem}>  
                             
                   <ListItemIcon className={classes.menuItemIcon}>

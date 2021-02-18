@@ -69,8 +69,8 @@ function Home () {
                   {
                       skills.map( (skill) => 
                       <Paper className={classes.skillCard}>
-                      <h2>{skill.name}</h2>
-                      <h4>{skill.description}</h4>
+                      <h1>{skill.name}</h1> 
+                      <h3>{skill.description}</h3>
                       </Paper> 
                       )
                   }
@@ -119,7 +119,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     backgroundColor: theme.palette.secondary.main,
     color: theme.palette.secondary.contrastText,
-  }
+  },
 }))
 
 export default Home;

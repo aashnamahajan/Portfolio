@@ -4,7 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Drawer from '@material-ui/core/Drawer'
 import { makeStyles } from '@material-ui/core/styles'
 import NavItem from '../NavItem';
-import { Box, Button, Typography } from '@material-ui/core';
+import { Box, Button, Link, Typography } from '@material-ui/core';
 
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
@@ -15,13 +15,16 @@ import PhoneIcon from '@material-ui/icons/Phone';
 
 const icons = [ 
     { 
-    Icon: <LinkedInIcon/>
+    Icon: <LinkedInIcon/>,
+    Link: 'https://www.linkedin.com/in/aashna-mahajan/'
     },
     { 
-    Icon: <EmailIcon/>
+    Icon: <EmailIcon/>,
+    Link: 'mailto:mahajan.aashna@gmail.com'
     },
     { 
-    Icon: <GitHubIcon/>
+    Icon: <GitHubIcon/>,
+    Link: 'https://github.com/aashnamahajan'
     },
     
 ]
@@ -48,7 +51,11 @@ function SideNavBar() {
 
                     
                     <div className={classes.iconMenu}>
-                    { icons.map( (item)=> <Button className={classes.iconList}> {item.Icon} </Button>) }
+                    { icons.map( (item)=> 
+                    <Link href={item.Link} target="_blank">
+                    <Button className={classes.iconList}> {item.Icon} </Button>
+                    </Link>
+                    ) }
                     </div>
                
                
