@@ -13,26 +13,21 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import EmailIcon from '@material-ui/icons/Email';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PhoneIcon from '@material-ui/icons/Phone';
-import { isTemplateExpression } from 'typescript';
 
 const icons = [ 
     { 
-    Icon: <GitHubIcon/>
+    Icon: <LinkedInIcon/>
     },
     { 
     Icon: <EmailIcon/>
     },
-    // { 
-    // Icon: <PhoneIcon/>
-    // },
     { 
-    Icon: <TwitterIcon/>
+    Icon: <GitHubIcon/>
     },
-    // { 
-    // Icon: <FacebookIcon/>
-    // },
+    
 ]
 
 function SideNavBar() {
