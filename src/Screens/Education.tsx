@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     height: theme.spacing(90),
     border: 'solid',
     // borderTop: 'solid',
-    borderWidth: 10,
+    borderWidth: 6,
     borderRightColor : theme.palette.secondary.light,
     borderBottomColor : theme.palette.secondary.light,
     margin: theme.spacing(6),
