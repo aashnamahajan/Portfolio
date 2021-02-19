@@ -25,8 +25,7 @@ const icons = [
     { 
     Icon: <GitHubIcon/>,
     Link: 'https://github.com/aashnamahajan'
-    },
-    
+    },   
 ]
 
 function SideNavBar() {

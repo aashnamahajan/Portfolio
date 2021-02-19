@@ -28,7 +28,7 @@ function Home () {
         },
         {
           name: "Tools",
-          description: "JIRA | GIT | SonarQube | AWS CLI | IntelliJ | Zeppelin | Jupyter notebook"
+          description: "JIRA | GIT | SonarQube | AWS CLI | IntelliJ | Jupyter | Zeppelin"
         },
         {
           name: "Libraries",
