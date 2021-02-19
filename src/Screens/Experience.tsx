@@ -75,8 +75,7 @@ function Experience () {
                                     {c}
                                   </List>
                                   )
-                              }
-                              
+                              }                              
                             </Typography>
                           </Paper>
                         </TimelineContent>
