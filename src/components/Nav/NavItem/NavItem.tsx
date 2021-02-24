@@ -13,12 +13,18 @@ import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import AssignmentIcon from '@material-ui/icons/Assignment'; 
+import BuildIcon from '@material-ui/icons/Build';
 
 const menuItems = [
   {
     name: 'Home',
     link: '/',
     Icon: <HomeIcon/>,
+  },
+  {
+    name: 'Skills',
+    link: '/skills  ',
+    Icon: <BuildIcon/>,
   },
   {
     name: 'Education',

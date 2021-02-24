@@ -4,54 +4,22 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typewriter from 'typewriter-effect';
 import Avatar from '@material-ui/core/Avatar';
 import MyPhoto from '../Assets/Images/profile_pic.jpg'
-import Carousel from 'react-material-ui-carousel'
 
 function Home () {
   const classes = useStyles()
-
-  const skills = [
-        {
-            name: "Frontend",
-            description: "HTML | CSS | JS | ANGULAR | REACT"
-        },
-        {
-            name: "Backend",
-            description: "Python | Java | Scala | C++"
-        },
-        {
-          name: "Database",
-          description: "Oracle | MySQL"
-        },
-        {
-          name: "AWS",
-          description: "S3 | IAM | KMS | Cloud Formation | Glue | Lambda"
-        },
-        {
-          name: "Tools",
-          description: "JIRA | GIT | SonarQube | AWS CLI | IntelliJ | Jupyter | Zeppelin"
-        },
-        {
-          name: "Libraries",
-          description: "NumPy | Pandas | Matplotlib | TensorFlow | Keras | OpenCV"
-        }
-      ]
 
       return (
         <div>
           <Paper className={classes.paper}>
            <Avatar alt="Profile picture" src={MyPhoto} className={classes.img}/>
 
-           <h1 className={classes.title}> Hi! I am Aashna Mahajan. </h1>
-           <h2 className={classes.typewriter}>
+           
+           <h1 className={classes.typewriter}>
            <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('I am a Software Engineer with experience.')
-                    .deleteChars(11)
-                    .typeString('<Strong>Full Stack development</Strong> experience.')
-                    .pauseFor(300)
-                    .deleteChars(59)
-                    .typeString('always eager to learn new things.')
+                    .typeString('Hi! I am Aashna Mahajan.')
+                    .deleteAll()
                     .start();
                 }}
                 options={{
@@ -60,26 +28,17 @@ function Home () {
                 }}
   
               />
-              </h2>
-           
-              <h3 className={classes.title}> SKILLS  </h3>
+          </h1>
 
-              {/* Carousel for skills  */}
-              <Carousel animation="slide" interval={3000}>
-                  {
-                      skills.map( (skill) => 
-                      <Paper className={classes.skillCard}>
-                      <h1>{skill.name}</h1> 
-                      <h3>{skill.description}</h3>
-                      </Paper> 
-                      )
-                  }
-              </Carousel>
-            
+          <h2 className={classes.title}> 
+            I am a Software Engineer with Full Stack Web Development Experience. I completed my Master's degree in Computer Science from the University at Buffalo, SUNY, New York. I love the field of computing and technology which allows me to build solutions to benefit the society. <br/>
+          </h2>
+          <h2 className={classes.title}> 
+            Beside Academics, I listen to EDM music, binge watch movies, like to sing, play ukulele and basketball.
+          </h2>
 
-            
+        </Paper>
 
-      </Paper>
         </div>
 
       );
@@ -90,15 +49,15 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     margin: '2%',
     flexDirection: 'column',
-    padding: theme.spacing(10), 
+    padding: theme.spacing(15), 
     // height: '100vh',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: '8px'
+    borderRadius: '8px',
   },
   img: {
-    width: theme.spacing(30),
-    height: theme.spacing(30),
+    width: theme.spacing(32),
+    height: theme.spacing(32),
     borderWidth: 8, 
     borderColor: theme.palette.secondary.main,
     borderStyle:'solid'
@@ -108,17 +67,6 @@ const useStyles = makeStyles(theme => ({
   },
   typewriter: {
     color: theme.palette.secondary.dark,
-  },
-  skillCard: {
-    padding: theme.spacing(3),
-    width: theme.spacing(70),
-    height: theme.spacing(15),
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: theme.palette.secondary.main,
-    color: theme.palette.secondary.contrastText,
   },
 }))
 
