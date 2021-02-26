@@ -23,7 +23,7 @@ const menuItems = [
   },
   {
     name: 'Skills',
-    link: '/skills  ',
+    link: '/skills',
     Icon: <BuildIcon/>,
   },
   {
